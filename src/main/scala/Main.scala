@@ -12,15 +12,12 @@ class Main {
   }
 
   def countIncreasesInThrees(l: List[Int], count: Int = 0): Int = {
-    val threeHead = l.splitAt(3)._1
-
     l match {
-      case _ :: tail if tail.size >= 3 =>
-        if (tail.take(3).sum > threeHead.sum) {
-          countIncreasesInThrees(tail, count + 1)
-        } else {
-          countIncreasesInThrees(tail, count)
-        }
+      case head :: tail if tail.size >= 3 =>
+        countIncreasesInThrees(
+          tail,
+          if (tail.take(3).sum > (head :: tail.take(2)).sum) count + 1 else count
+        )
       case _ => count
     }
   }
@@ -28,7 +25,10 @@ class Main {
   def countIncreases(l: List[Int], count: Int = 0): Int = {
     l match {
       case head :: tail if tail != Nil =>
-        if (head < tail.head) countIncreases(tail, count + 1) else countIncreases(tail, count)
+        countIncreases(
+          tail,
+          if (head < tail.head) count + 1 else count
+        )
       case _ => count
     }
   }
