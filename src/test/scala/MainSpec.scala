@@ -48,7 +48,38 @@ class MainSpec extends FreeSpec with MustMatchers {
     }
   }
 
+  "countIncreasesInThrees" - {
+
+    "should return zero when empty list" in {
+      main.countIncreasesInThrees(List.empty) mustBe 0
+    }
+
+    "should return 0 when less than 2 comparable sets of elements" in {
+      main.countIncreasesInThrees(List(1, 1, 1, 1, 1)) mustBe 0
+    }
+
+    "should return 0 when 2 comparable sets of elements but no increase" in {
+      main.countIncreasesInThrees(List(1, 1, 1, 1, 1, 1)) mustBe 0
+    }
+
+    "should return 1 when 2 comparable sets of elements and 1 increase" in {
+      main.countIncreasesInThrees(List(1, 1, 1, 1, 1, 2)) mustBe 1
+    }
+
+    "should return 1 when multiple comparable sets of elements and 1 increase" in {
+      main.countIncreasesInThrees(List(1, 1, 1, 2, 1, 1, 1)) mustBe 1
+    }
+
+    "should return multiple when multiple comparable sets of elements and multiple increases" in {
+      main.countIncreasesInThrees(List(1, 1, 1, 1, 1, 2, 3, 4)) mustBe 3
+    }
+  }
+
   "run day01task01" in {
     main.day01task01() mustBe 1581
+  }
+
+  "run day01task02" in {
+    main.day01task02() mustBe 1618
   }
 }
