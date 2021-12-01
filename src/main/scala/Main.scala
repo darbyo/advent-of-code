@@ -4,7 +4,7 @@ import scala.io._
 class Main {
 
   def day01task01() = {
-    countIncreases(readIntsFromFile("src/main/resources/day-1-data.txt"))
+    countIncreases(readIntsFromFile("src/main/scala/resources/day1/day-1-data.txt"))
   }
 
   def readIntsFromFile(path: String): List[Int] = {
