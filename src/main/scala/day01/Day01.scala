@@ -1,14 +1,18 @@
+package day01
+
 import scala.collection.immutable.Nil
 import scala.io._
 
-class Main {
+class Day01 {
+
+  private val dataPath = "src/main/scala/day01/resources/data.txt"
 
   def day01task01() = {
-    countIncreases(readIntsFromFile("src/main/scala/resources/day1/day-1-data.txt"))
+    countIncreases(readIntsFromFile(dataPath))
   }
 
   def day01task02() = {
-    countIncreasesInThrees(readIntsFromFile("src/main/scala/resources/day1/day-1-data.txt"))
+    countIncreasesInThrees(readIntsFromFile(dataPath))
   }
 
   def countIncreasesInThrees(l: List[Int], count: Int = 0): Int = {
