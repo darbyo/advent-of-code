@@ -1,4 +1,4 @@
-scalaVersion := "2.13.3"
+scalaVersion := "2.13.12"
 
 name := "advent-of-code"
 organization := "christmas"
