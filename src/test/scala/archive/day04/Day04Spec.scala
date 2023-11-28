@@ -1,4 +1,4 @@
-package day04
+package archive.day04
 
 import org.scalatest.{FreeSpec, MustMatchers}
 
@@ -13,7 +13,7 @@ class Day04Spec extends FreeSpec with MustMatchers {
   "readDiveInstructions" - {
 
     "should return 1 DiveInstruction from a file" in {
-      val bingo = main.readBingo("src/test/scala/day04/resources/values.txt")
+      val bingo = main.readBingo("src/test/scala/archive/day04/resources/values.txt")
 
       bingo.numbers mustBe List(7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1)
       bingo.items.size mustBe 1

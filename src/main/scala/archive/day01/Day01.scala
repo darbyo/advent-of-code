@@ -1,11 +1,11 @@
-package day01
+package archive.day01
 
 import scala.collection.immutable.Nil
 import scala.io._
 
 class Day01 {
 
-  private val dataPath = "src/main/scala/day01/resources/data.txt"
+  private val dataPath = "src/main/scala/archive/day01/resources/data.txt"
 
   def day01task01() = {
     countIncreases(readIntsFromFile(dataPath))

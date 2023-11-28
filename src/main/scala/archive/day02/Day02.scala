@@ -1,11 +1,11 @@
-package day02
+package archive.day02
 
 import scala.collection.immutable.Nil
 import scala.io._
 
 class Day02 {
 
-  private val dataPath = "src/main/scala/day02/resources/data.txt"
+  private val dataPath = "src/main/scala/archive/day02/resources/data.txt"
   private val defaultDivePosition = DivePosition(0, 0)
 
   def day02task01() = {

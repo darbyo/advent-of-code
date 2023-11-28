@@ -1,11 +1,11 @@
-package day04
+package archive.day04
 
 import scala.annotation.tailrec
 import scala.io._
 
 class Day04 {
 
-  private val dataPath = "src/main/scala/day04/resources/data.txt"
+  private val dataPath = "src/main/scala/archive/day04/resources/data.txt"
 
   def readBingo(path: String): Bingo = {
     val source = Source.fromFile(path)

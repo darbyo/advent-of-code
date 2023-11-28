@@ -1,4 +1,4 @@
-package day01
+package archive.day01
 
 import org.scalatest.{FreeSpec, MustMatchers}
 
@@ -9,11 +9,11 @@ class Day01Spec extends FreeSpec with MustMatchers {
   "readIntsFromFile" - {
 
     "should return one Int from a file" in {
-      main.readIntsFromFile("src/test/scala/day01/resources/value.txt") mustBe Seq(100)
+      main.readIntsFromFile("src/test/scala/archive/day01/resources/value.txt") mustBe Seq(100)
     }
 
     "should return multiple Ints from a file" in {
-      main.readIntsFromFile("src/test/scala/day01/resources/values.txt") mustBe Seq(100, 101, 102, 103)
+      main.readIntsFromFile("src/test/scala/archive/day01/resources/values.txt") mustBe Seq(100, 101, 102, 103)
     }
   }
 

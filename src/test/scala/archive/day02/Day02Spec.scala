@@ -1,4 +1,4 @@
-package day02
+package archive.day02
 
 import org.scalatest.{FreeSpec, MustMatchers}
 
@@ -11,17 +11,17 @@ class Day02Spec extends FreeSpec with MustMatchers {
   "readDiveInstructions" - {
 
     "should return 1 DiveInstruction from a file" in {
-      main.readDiveInstructions("src/test/scala/day02/resources/value.txt")
+      main.readDiveInstructions("src/test/scala/archive/day02/resources/value.txt")
         .mustBe(List(forwardInstruction))
     }
 
     "should return multiple DiveInstruction from a file" in {
-      main.readDiveInstructions("src/test/scala/day02/resources/values.txt")
+      main.readDiveInstructions("src/test/scala/archive/day02/resources/values.txt")
         .mustBe(List(forwardInstruction, forwardInstruction))
     }
 
     "should return all DiveInstruction types from a file" in {
-      main.readDiveInstructions("src/test/scala/day02/resources/allValues.txt")
+      main.readDiveInstructions("src/test/scala/archive/day02/resources/allValues.txt")
         .mustBe(List(
           forwardInstruction,
           DiveInstruction("down", 10),
