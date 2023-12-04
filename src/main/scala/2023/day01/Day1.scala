@@ -23,7 +23,6 @@ class Day1 {
   }
 
   def part2(dataPath: String) = {
-
     readStringsFromFile(dataPath).map(row => {
       val numPositions: List[(String, Int)] = (for {
         num <- snums
