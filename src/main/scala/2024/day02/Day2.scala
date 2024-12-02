@@ -1,7 +1,9 @@
 package `2024`.day02
 
+import utils.FileReader
+import utils.FileReader.readStringsFromFile
+
 import scala.annotation.tailrec
-import scala.io._
 
 class Day2 {
 
@@ -67,13 +69,5 @@ class Day2 {
         val diff = x - y
         if (diff >= 1 && diff <= 3) isDecreasingSafely(y :: tail) else false
     }
-  }
-
-  def readStringsFromFile(path: String): List[String] = {
-    val source = Source.fromFile(path)
-    val rows   = source.getLines.map(_.trim).toList
-
-    source.close()
-    rows
   }
 }
